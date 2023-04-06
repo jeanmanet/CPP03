@@ -6,7 +6,7 @@
 /*   By: jmanet <jmanet@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 11:59:01 by jmanet            #+#    #+#             */
-/*   Updated: 2023/04/06 18:53:24 by jmanet           ###   ########.fr       */
+/*   Updated: 2023/04/06 19:15:02 by jmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,20 +41,33 @@ ClapTrap& ClapTrap::operator=(const ClapTrap& rhs){
 void	ClapTrap::setHitPoints(unsigned int points) {
 	this->_hitPoints = points;
 }
+
 void	ClapTrap::setEnergyPoints(unsigned int points) {
 	this->_energyPoints = points;
 }
+
 void	ClapTrap::setAttackDamage(unsigned int damage) {
 	this->_attackDamage = damage;
 }
+
+void	ClapTrap::setName(std::string newName) {
+	this->_name = newName;
+}
+
 unsigned int	ClapTrap::getHitPoints() const {
 	return (this->_hitPoints);
 }
+
 unsigned int	ClapTrap::getEnergyPoints() const {
 	return (this->_energyPoints);
 }
+
 unsigned int	ClapTrap::getAttackDamage() const {
 	return (this->_attackDamage);
+}
+
+std::string	ClapTrap::getName() const {
+	return (this->_name);
 }
 
 void	ClapTrap::attack(const std::string& target) {
