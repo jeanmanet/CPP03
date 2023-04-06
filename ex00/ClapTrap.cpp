@@ -6,7 +6,7 @@
 /*   By: jmanet <jmanet@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 11:59:01 by jmanet            #+#    #+#             */
-/*   Updated: 2023/04/06 16:26:25 by jmanet           ###   ########.fr       */
+/*   Updated: 2023/04/06 18:27:13 by jmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,14 @@ ClapTrap::ClapTrap(ClapTrap& src) {
 
 ClapTrap::~ClapTrap() {
 	std::cout << "Rest in peace dear " << this->_name << std::endl;
+}
+
+ClapTrap& ClapTrap::operator=(const ClapTrap& rhs){
+	_name = rhs._name;
+	_hitPoints = rhs._hitPoints;
+	_energyPoints = rhs._energyPoints;
+	_attackDamage = rhs._attackDamage;
+	return (*this);
 }
 
 void	ClapTrap::attack(const std::string& target) {

@@ -6,7 +6,7 @@
 /*   By: jmanet <jmanet@student.42nice.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/06 11:50:59 by jmanet            #+#    #+#             */
-/*   Updated: 2023/04/06 12:49:26 by jmanet           ###   ########.fr       */
+/*   Updated: 2023/04/06 18:25:51 by jmanet           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,8 @@ public:
 	ClapTrap(std::string name);
 	ClapTrap(ClapTrap& src);
 	~ClapTrap();
+
+	ClapTrap& operator=(const ClapTrap& rhs);
 
 	void attack(const std::string& target);
 	void takeDamage(unsigned int amount);
